@@ -1,0 +1,16 @@
+{
+  "name": "the-chatbot-thingy",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aoi.js": "github:aoijs/aoi.js#5eb399b",
+    "@akarui/aoi.db": "^2.2.7"
+  }
+}
