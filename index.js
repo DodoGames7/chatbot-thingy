@@ -4,7 +4,7 @@ const config = require("./config.json");
 const client = new AoiClient({
     token: process.env.Token || config.BotToken,
     prefix: "$getGuildVar[prefix]",
-    mobilePlatform: config.MobileStatus,
+    mobilePlatform: config.MobileStatus, // Check setup options within config.json file
     intents: ["MessageContent", "Guilds", "GuildMessages"],
     events: ["onMessage", "onInteractionCreate"],
     database: {
