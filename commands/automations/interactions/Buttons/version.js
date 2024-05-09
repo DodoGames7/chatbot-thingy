@@ -3,7 +3,7 @@ module.exports = [{
   prototype: "button",
   code: `
   $interactionUpdate[{newEmbed:{title:Changes}{description:
-*There're no changes in this category*
+* Add a message that appears on the console whenever the bot starts
   }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}]
 
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}
@@ -17,7 +17,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==versionchanges;]
   prototype: "button",
   code: `
   $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
-* Fixed bugs that rendered the bot unusable 
+*There're no changes currently in this category* 
   }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}]
 
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}
