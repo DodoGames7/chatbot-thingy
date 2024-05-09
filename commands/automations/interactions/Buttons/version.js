@@ -3,7 +3,7 @@ module.exports = [{
   prototype: "button",
   code: `
   $interactionUpdate[{newEmbed:{title:Changes}{description:
-* Add a message that appears on the console whenever the bot starts
+* Add development warning on startup if pre-release mode is enabled
   }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}]
 
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}

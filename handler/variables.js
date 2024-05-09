@@ -6,8 +6,8 @@ module.exports = {
     chatbotChannel: "",
     replyping: "off",
     embedmode: "off",
-    version: "1.0.3",
-    pre_release_mode: "off",
-    buildDate: "1715287946527",
-    release_type: "Stable",
+    version: "1.0.4",
+    pre_release_mode: "on",
+    buildDate: "1715288827744",
+    release_type: "Pre-release",
 }
