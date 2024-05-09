@@ -3,6 +3,7 @@ module.exports = [{
     type: "ready",
     channel: "",
     code: `$log[Chatbot is ready to be used!]
+    $wait[2s]
     $ifAwaited[$getVar[pre_release_mode]==on;{execute:senddevwarning}]`
 },{
     name: "senddevwarning",
