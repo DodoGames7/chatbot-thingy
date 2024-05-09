@@ -4,6 +4,7 @@ module.exports = [{
   code: `
   $interactionUpdate[{newEmbed:{title:Changes}{description:
 * Add development warning on startup if pre-release mode is enabled
+* \`set-chatbot\` cooldown has been lowered to 3 seconds
   }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:true}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:false}}]
 
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}
@@ -17,7 +18,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==versionchanges;]
   prototype: "button",
   code: `
   $interactionUpdate[{newEmbed:{title:Bug Fixes}{description:
-*There're no changes currently in this category* 
+* Fixed the startup message not being actually logged
   }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:true}{button:Other:2:versionother_$authorID:false}}]
 
   $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}
@@ -30,7 +31,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==versionchanges;]
     type: "interaction",
   prototype: "button",
   code: `$interactionUpdate[{newEmbed:{title:Other}{description:
-*There're no changes in this category*
+* The bot's startup message will now only appear after 2 secs have passed
 }{color:Purple}}{actionRow:{button:Home:2:homebutton_$authorID:false:🏠}{button:Changes:2:versionchanges_$authorID:false}{button:Bug Fixes:2:versionbugfixes_$authorID:false}{button:Other:2:versionother_$authorID:true}}]
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{newEmbed:{title:Uh, Oh!}{description:You're not the author of this interaction.}{color:Red}}

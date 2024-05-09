@@ -14,8 +14,8 @@ $description[Select a channel to set for the bot to reply into!
     Tip: Can't find the channel name you're looking for? Try typing the channel name into the menu instead!]
     $color[Yellow]
     $addSelectMenu[1;channel;chatbotmenu_$authorID;Open The menu.;1;1;false;Text]
-    $cooldown[5s; Slow down! Don't spam the command!
-Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[5s;user;set-chatbot;$authorID];$dateStamp];1000]]:R>]
+    $cooldown[3s; Slow down! Don't spam the command!
+Time remaining: <t:$truncate[$divide[$sum[$getCooldownTime[3s;user;set-chatbot;$authorID];$dateStamp];1000]]:R>]
 
 
 $let[channel;$advancedReplaceText[$checkCondition[$getGuildVar
